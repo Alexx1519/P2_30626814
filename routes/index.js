@@ -84,7 +84,7 @@ router.post('/', function(req, res, next) {
             console.log('Error')
         }
         }); */
-        db.run("INSERT INTO contactos (usuario, correo, mensaje, date, ip, "VENEZUELA") VALUES (?, ?, ?, ?, ?, ?)", [usuario, correo, mensaje, Datetime, myIP, country], function (err) {
+        db.run("INSERT INTO contactos (usuario, correo, mensaje, date, ip, country) VALUES (?, ?, ?, ?, ?, ?)", [usuario, correo, mensaje, Datetime, myIP, "VENEZUELA"], function (err) {
           if (err) {
               return console.log(err.message);
           } 
